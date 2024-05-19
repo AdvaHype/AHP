@@ -15,8 +15,6 @@
 
  * ------------------------------------------------------ */
 
-using namespace std;
-
 #define Black "\e[0;30m"
 #define Red "\e[0;31m"
 #define Green "\e[0;32m"
