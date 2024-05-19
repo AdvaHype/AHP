@@ -270,4 +270,27 @@ class Lexer
 
             return tokens;
         }
+
+        /**
+         * Dump tokens
+         *
+         * @param tokens
+         * @return string
+        */
+        static string dumpTokens(vector<Token> tokens)
+        {
+            string output = "[";
+
+            for (size_t index = 0; index < tokens.size(); ++index)
+            {
+                output += tokens[index];
+
+                if (index != tokens.size() - 1)
+                {
+                    output += ", ";
+                }
+            }
+
+            return output + "]";
+        }
 };

@@ -39,21 +39,7 @@ int main(int argc, char* argv[])
                 Lexer lexer = Lexer(line);
                 vector<Token> tokens = lexer.tokenize();
 
-                cout << "[";
-
-                for (Token token: tokens)
-                {
-                    cout << (string) token;
-
-                    if (tokens.size() - 1 > index)
-                    {
-                        cout << ", ";
-                    }
-
-                    index++;
-                }
-
-                cout << "]" << endl;
+                cout << Lexer::dumpTokens(tokens) << endl;
 
             }
         }
@@ -77,21 +63,7 @@ int main(int argc, char* argv[])
             Lexer lexer = Lexer(data);
             vector<Token> tokens = lexer.tokenize();
 
-            cout << "[";
-
-            for (Token token: tokens)
-            {
-                cout << (string) token;
-
-                if (tokens.size() - 1 > index)
-                {
-                    cout << ", ";
-                }
-
-                index++;
-            }
-
-            cout << "]" << endl;
+            cout << Lexer::dumpTokens(tokens) << endl;
         }
     }
 
